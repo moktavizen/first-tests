@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "test": "vitest",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix"
+  },
+  "devDependencies": {
+    "oxfmt": "^0.43.0",
+    "oxlint": "^1.58.0",
+    "vitest": "^4.1.2"
+  }
+}
