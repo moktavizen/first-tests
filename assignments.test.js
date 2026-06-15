@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { calculator, capitalize, reverseString } from "./assignments.js";
+import { caesarCipher, calculator, capitalize, reverseString } from "./assignments.js";
 
 describe("capitalize()", () => {
   it("Only accept string", () => {
@@ -80,5 +80,26 @@ describe("calculator", () => {
       expect(calculator.multiply(2, 2)).toBe(4);
       expect(calculator.multiply(4, -1)).toBe(-4);
     });
+  });
+});
+
+describe("caesarCipher()", () => {
+  it("Shifts a single character by N", () => {
+    expect(caesarCipher("a", 1)).toBe("b");
+    expect(caesarCipher("a", 2)).toBe("c");
+    expect(caesarCipher("a", 3)).toBe("d");
+  });
+  it("Shifts a single word by N", () => {
+    expect(caesarCipher("abc", 1)).toBe("bcd");
+  });
+  it("Wraps z to a", () => {
+    expect(caesarCipher("z", 1)).toBe("a");
+    expect(caesarCipher("xyz", 3)).toBe("abc");
+  });
+  it("Preserves case", () => {
+    expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
+  });
+  it("Preserves punctuation", () => {
+    expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
   });
 });

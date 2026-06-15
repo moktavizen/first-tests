@@ -38,3 +38,19 @@ export const calculator = {
     return x * y;
   },
 };
+
+function shiftChar(char, shift) {
+  if (!/[a-z]/i.test(char)) return char;
+
+  const base = "a".charCodeAt(0);
+  const shiftedCode = ((char.charCodeAt(0) - base + shift) % 26) + base;
+  return String.fromCharCode(shiftedCode);
+}
+
+// takes a string and a shift factor and returns it with each character “shifted”
+export function caesarCipher(str, shift) {
+  return str
+    .split("")
+    .map((char) => shiftChar(char, shift))
+    .join("");
+}
