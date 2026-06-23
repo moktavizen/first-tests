@@ -98,6 +98,7 @@ describe("caesarCipher()", () => {
   });
   it("Preserves case", () => {
     expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
+    expect(caesarCipher("ABc", 1)).toBe("BCd");
   });
   it("Preserves punctuation", () => {
     expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");

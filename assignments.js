@@ -42,7 +42,7 @@ export const calculator = {
 function shiftChar(char, shift) {
   if (!/[a-z]/i.test(char)) return char;
 
-  const base = "a".charCodeAt(0);
+  const base = (char === char.toUpperCase() ? "A" : "a").charCodeAt(0);
   const shiftedCode = ((char.charCodeAt(0) - base + shift) % 26) + base;
   return String.fromCharCode(shiftedCode);
 }
