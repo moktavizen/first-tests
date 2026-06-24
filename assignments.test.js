@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { caesarCipher, calculator, capitalize, reverseString } from "./assignments.js";
+import {
+  analyzeArray,
+  caesarCipher,
+  calculator,
+  capitalize,
+  reverseString,
+} from "./assignments.js";
 
 describe("capitalize()", () => {
   it("Only accept string", () => {
@@ -102,5 +108,16 @@ describe("caesarCipher()", () => {
   });
   it("Preserves punctuation", () => {
     expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+  });
+});
+
+describe("analyzeArray()", () => {
+  it("Calculates the average, min, max, and length", () => {
+    expect(analyzeArray([1, 8, 3, 4, 2, 6])).toStrictEqual({
+      average: 4,
+      min: 1,
+      max: 8,
+      length: 6,
+    });
   });
 });

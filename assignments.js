@@ -54,3 +54,17 @@ export function caesarCipher(str, shift) {
     .map((char) => shiftChar(char, shift))
     .join("");
 }
+
+// takes an array of numbers and returns an object with the following properties:
+// average, min, max, and length
+export function analyzeArray(arr) {
+  const sum = arr.reduce((acc, curr) => acc + curr, 0);
+  const length = arr.length;
+
+  return {
+    average: sum / length,
+    min: Math.min(...arr),
+    max: Math.max(...arr),
+    length: length,
+  };
+}
