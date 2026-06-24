@@ -7,7 +7,7 @@ import {
   reverseString,
 } from "./assignments.js";
 
-describe("capitalize()", () => {
+describe("capitalize", () => {
   it("Only accept string", () => {
     expect(() => capitalize(67)).toThrow("only accept string");
     expect(() => capitalize(true)).toThrow("only accept string");
@@ -23,7 +23,7 @@ describe("capitalize()", () => {
   });
 });
 
-describe("reverseString()", () => {
+describe("reverseString", () => {
   it("Only accept string", () => {
     expect(() => reverseString(67)).toThrow("only accept string");
     expect(() => reverseString(true)).toThrow("only accept string");
@@ -40,7 +40,7 @@ describe("reverseString()", () => {
 });
 
 describe("calculator", () => {
-  describe("add()", () => {
+  describe("add", () => {
     it("Only accept Numbers", () => {
       expect(() => calculator.add("one", "two")).toThrow("only accept numbers");
       expect(() => calculator.add("8", 8)).toThrow("only accept numbers");
@@ -52,7 +52,7 @@ describe("calculator", () => {
     });
   });
 
-  describe("subtract()", () => {
+  describe("subtract", () => {
     it("Only accept Numbers", () => {
       expect(() => calculator.subtract("one", "two")).toThrow("only accept numbers");
       expect(() => calculator.subtract("8", 8)).toThrow("only accept numbers");
@@ -64,7 +64,7 @@ describe("calculator", () => {
     });
   });
 
-  describe("divide()", () => {
+  describe("divide", () => {
     it("Only accept Numbers", () => {
       expect(() => calculator.divide("one", "two")).toThrow("only accept numbers");
       expect(() => calculator.divide("8", 8)).toThrow("only accept numbers");
@@ -76,7 +76,7 @@ describe("calculator", () => {
     });
   });
 
-  describe("multiply()", () => {
+  describe("multiply", () => {
     it("Only accept Numbers", () => {
       expect(() => calculator.multiply("one", "two")).toThrow("only accept numbers");
       expect(() => calculator.multiply("8", 8)).toThrow("only accept numbers");
@@ -89,7 +89,7 @@ describe("calculator", () => {
   });
 });
 
-describe("caesarCipher()", () => {
+describe("caesarCipher", () => {
   it("Shifts a single character by N", () => {
     expect(caesarCipher("a", 1)).toBe("b");
     expect(caesarCipher("a", 2)).toBe("c");
@@ -111,7 +111,7 @@ describe("caesarCipher()", () => {
   });
 });
 
-describe("analyzeArray()", () => {
+describe("analyzeArray", () => {
   it("Calculates the average, min, max, and length", () => {
     expect(analyzeArray([1, 8, 3, 4, 2, 6])).toStrictEqual({
       average: 4,
